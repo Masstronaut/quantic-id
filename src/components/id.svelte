@@ -1,5 +1,5 @@
 <script>
-	import QuanticLogoSVG from './QuanticLogo.svelte';
+	import QuanticLogoSVG from './quanticLogo.svelte';
 	export let photoURL;
 	export let name;
 	export let id;
