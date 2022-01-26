@@ -1,14 +1,27 @@
 <script context="module">
-	export async function load({ params }) {
+	export async function load({ params, fetch }) {
 		const id = params.id;
-		return {
-			props: { id }
-		};
+		const res = await fetch(`/api/id/${id}.json`);
+		if (res.ok) {
+			return {
+				props: { student: await res.json() }
+			};
+		} else {
+			return {
+				props: { student: null }
+			};
+		}
 	}
 </script>
 
 <script>
-	export let id;
+	import StudentID from '../../components/id.svelte';
+	export let student;
 </script>
 
-Hi {id}.
+<StudentID
+	name={student.name}
+	id={student.student_id}
+	photoURL={student.imageUrl}
+	date={student.date}
+/>
