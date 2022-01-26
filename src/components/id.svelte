@@ -41,6 +41,7 @@
 	}
 	p {
 		margin: 0;
+		font-size: var(--font-size-3);
 	}
 	.profile-photo {
 		border-radius: 10px;

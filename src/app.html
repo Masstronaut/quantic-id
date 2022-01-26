@@ -51,6 +51,110 @@
 	textarea {
 		white-space: revert;
 	}
+
+	/* basic design system settings */
+	html {
+		/* this defines what 1rem is */
+		font-size: 62.5%;
+
+		/* 1rem = 10px. 10px/16px = 62.5% */
+		@media only screen and (max-width: 900/16 * 1em) {
+			/* <900px */
+			font-size: 50%;
+			/* 1rem = 8px. 8/16 = 50% */
+		}
+
+		@media only screen and (max-width: 1200/16 * 1em) {
+			/* 1200px */
+			font-size: 56.25%;
+			/* 1rem = 9px. 9/16 = 56.25% */
+		}
+
+		@media only screen and (min-width: 1800/16 * 1em) {
+			/* >1800px */
+			font-size: 75%;
+			/* 1rem = 12px. 12/16 = 75% */
+		}
+	}
+
+	:root {
+		--device-size-m: 720px;
+		font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		--font-mono: 'Fira Mono', monospace;
+		--column-width: 420rem;
+		--column-margin-top: 420rem;
+		/* Font sizes */
+		--font-size-0: 1rem;
+		--font-size-1: 1.2rem;
+		--font-size-2: 1.4rem;
+		--font-size-3: 1.6rem;
+		--font-size-4: 1.8rem;
+		--font-size-5: 2.0rem;
+		--font-size-6: 2.4rem;
+		--font-size-7: 3.0rem;
+		--font-size-8: 3.6rem;
+		--font-size-9: 4.8rem;
+		--font-size-10: 6.0rem;
+		--font-size-11: 7.2rem;
+		/* Grayscale colors */
+		--color-white: 0deg, 0%, 98%;
+		--color-gray-50: 210deg, 36%, 96%;
+		--color-gray-100: 212deg, 33%, 89%;
+		--color-gray-200: 210deg, 31%, 80%;
+		--color-gray-300: 211deg, 27%, 70%;
+		--color-gray-400: 209deg, 23%, 60%;
+		--color-gray-500: 210deg, 22%, 49%;
+		--color-gray-600: 209deg, 28%, 39%;
+		--color-gray-700: 209deg, 34%, 30%;
+		--color-gray-800: 211deg, 39%, 23%;
+		--color-black: 209deg, 61%, 16%;
+		/* Primary colors */
+		--color-base: 243deg, 94%, 66%;
+		--color-primary-50: 240deg, 100%, 95%;
+		--color-primary-100: 238deg, 100%, 88%;
+		--color-primary-200: 238deg, 94%, 81%;
+		--color-primary-300: 240deg, 95%, 76%;
+		--color-primary-400: 243deg, 94%, 70%;
+		--color-primary-500: 243deg, 94%, 66%;
+		--color-primary-600: 245deg, 92%, 60%;
+		--color-primary-700: 245deg, 79%, 52%;
+		--color-primary-800: 245deg, 86%, 40%;
+		--color-primary-900: 245deg, 100%, 27%;
+		--color-primary: var(--color-primary-500);
+		--color-primary-light: var(--color-primary-200);
+		--color-primary-dark: var(--color__primary-800);
+		/* Border radius */
+		--corner-radius-primary: 10px;
+		/* Border styles */
+		--block-border: 1px solid hsl(var(--color-primary-300));
+		/* Block background */
+		--block-background-color: var(--color-white);
+		/* Shadows */
+		/* override the shadow color further 
+	down the cascade for colored shadows */
+		--color-shadow: var(--color-black);
+		--shadow-xxsmall: 0.5px 1px 1px hsla(var(--color-shadow), 0.7);
+		--shadow-xsmall: 1px 2px 2px hsla(var(--color-shadow), 0.6);
+		--shadow-small: 1px 2px 2px hsla(var(--color-shadow), 0.4), 2px 4px 4px hsla(var(--color-shadow), 0.2);
+		--shadow-medium: 1px 2px 2px hsla(var(--color-shadow), 0.075), 2px 4px 4px hsla(var(--color-shadow), 0.075), 4px 8px 8px hsla(var(--color-shadow), 0.075), 8px 16px 16px hsla(var(--color-shadow), 0.075);
+		--shadow-large: 1px 2px 2px hsla(var(--color-shadow), 0.075), 2px 4px 4px hsla(var(--color-shadow), 0.075), 4px 8px 8px hsla(var(--color-shadow), 0.075), 8px 16px 16px hsla(var(--color-shadow), 0.075), 16px 32px 32px hsla(var(--color-shadow), 0.075);
+		/* Spacing */
+		--spacing-unit: 1.2rem;
+		--spacing-1: calc(var(--spacing-unit) / 3);
+		--spacing-2: calc(var(--spacing-unit) * 2 / 3);
+		--spacing-3: calc(var(--spacing-unit));
+		--spacing-4: calc(var(--spacing-unit) * 4 / 3);
+		--spacing-5: calc(var(--spacing-unit) * 2);
+		--spacing-6: calc(var(--spacing-unit) * 3);
+		--spacing-7: calc(var(--spacing-unit) * 5);
+		--spacing-8: calc(var(--spacing-unit) * 8);
+		--spacing-9: calc(var(--spacing-unit) * 11);
+		--spacing-10: calc(var(--spacing-unit) * 13);
+		--spacing-11: calc(var(--spacing-unit) * 21);
+		--spacing-12: calc(var(--spacing-unit) * 34);
+		--spacing-13: calc(var(--spacing-unit) * 55);
+		--spacing-14: calc(var(--spacing-unit) * 89);
+	}
 </style>
 
 </html>

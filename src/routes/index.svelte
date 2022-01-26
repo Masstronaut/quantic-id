@@ -1,4 +1,5 @@
 <script>
+	import TextInput from '../components/TextInput.svelte';
 	import StudentID from '../components/id.svelte';
 
 	/*************************************************************************************
@@ -11,6 +12,10 @@
 </script>
 
 <div class="container">
+	<h1>Create your digital Quantic student ID</h1>
+
+	<TextInput id="name" label="Name" required={true} />
+
 	<StudentID {name} {id} {date} {photoURL} />
 </div>
 
