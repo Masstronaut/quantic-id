@@ -33,8 +33,8 @@
 		if (response.ok) {
 			const json = await response.json();
 			window.location = `/student/${json[0].id}`;
+			console.log(json);
 		}
-		console.log(json);
 	};
 </script>
 
